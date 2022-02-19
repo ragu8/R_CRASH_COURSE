@@ -140,4 +140,41 @@ bar <- sort(x=foo)
 bar
 sort(x=c(foo,bar),decreasing=FALSE)
 
-#
+#Finding a vector with length
+length(x=c(3,2,9,1))
+length(x=5:13)
+
+foo <- 4
+x1 <- c(3,8.3,rep(x=32,times=foo),seq(from=-2,to=1,length.out=foo))
+length(x=x1)
+bar
+
+#Exercise 2.3
+#Create and store a sequence of values from 5 to ???11 that pro-gresses in steps of 0.3.
+a <- seq(from=5,to=-11,length.out=57)
+a
+
+#Overwrite the object from (a) using the same sequence with the order reversed.
+b=rev(a)
+b
+#Repeat the vector c(-1,3,-5,7,-9) twice, with each element repeated 10 times, and store the result. Display the result sorted from largest to smallest.
+c <- rep(x=c(-1,3,-5,7,-9),each=2,times=10)
+c
+
+#Create and store a vector that contains, in any configuration, the following
+#A sequence of integers from 6 to 12 (inclusive)
+d <-6:12
+#A threefold repetition of the value 5.3
+rep(x=5.3,each=3)
+#The number -3
+d<- -3
+#A sequence of nine values starting at 102 and ending at the number that is the total length of the vector created in (c)
+c = length(c)
+d <- seq(from=102,to=c)
+d
+#Confirm that the length of the vector created in (d) is 20.
+d <-length(d)
+d
+
+#Subsetting and Element Extraction
+myvec 
