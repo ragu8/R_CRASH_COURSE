@@ -37,7 +37,7 @@ x = y/4
 
 pi
 
-#Exercise
+#Exercise 1.1
 #Say the word cat aloud.
 cat("cat aloud")
 
