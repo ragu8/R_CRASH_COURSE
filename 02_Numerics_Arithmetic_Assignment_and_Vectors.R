@@ -177,4 +177,51 @@ d <-length(d)
 d
 
 #Subsetting and Element Extraction
-myvec 
+myvec <- c(2,3,4566,3,4,56,7,8,9,0)
+length((myvec))
+myvec[1]
+
+x <- myvec[1]
+x
+
+#Exercise 2.4
+#Create and store a vector that contains the following, in this order
+#A sequence of length 5 from 3 to 6 (inclusiv)
+a <- seq(from=3,to=6,by=0.7)
+
+#A twofold repetition of the vector c(2,-5.1,-33)
+a <- rep(x=c(2,-5.1,-33),each=2)
+
+#The value (7/42) + 2
+(7/42) + 2
+
+#Extract the first and last elements of your vector from (a), storing them as a new objet
+b <- c(a[1:2],a[4:5])
+b
+
+#Store as a third object the values returned by omitting the first and last values of your vector from (a)
+c <-c(a[3])
+c
+
+#Use only (b) and (c) to reconstruct (a).
+d<-c(b[1:2],c[1],b[3:4])
+d
+
+#Overwrite (a) with the same values sorted from smallest to largest 
+e <- sort(a,decreasing = FALSE) 
+
+#Use the colon operator as an index vector to reverse the order of (e), and confirm this is identical to using sort on (e) with decreasing=TRUE.
+f <- rev(e[1:5])
+f <- sort(a,decreasing = TRUE)
+
+#Create a vector from (c) that repeats the third element of (c) three times, the sixth element four times, and the last ele-ment onc
+g<-c(a[1:2],rep(a[3],each=3),rep(a[6],each=4),a[-1])
+g
+
+#Create a new vector as a copy of (e) by assigning (e) as is to a newly named object. Using this new copy of (e), overwrite the fifth to the seventh (inclusive), and the last element with the values 99 to 95 (inclusive), respectiv
+h<- e
+h[1] =99
+h[7] =95
+h
+
+#
