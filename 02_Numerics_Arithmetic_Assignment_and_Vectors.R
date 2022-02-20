@@ -224,4 +224,42 @@ h[1] =99
 h[7] =95
 h
 
-#
+#Vector-Oriented Behavior
+foo <-5.5:0.5
+foo
+foo-c(2,4,6,8,10,12)
+bar<-c(1,-1,2)
+foo*bar
+baz<-c(1,-1,0.5,-0.5)
+foo*baz
+
+qux <- 3
+foo+qux
+
+foo
+sum(foo)
+prod(foo)
+
+foo
+foo[c(1,3,5,6)] <-c(99,-99)
+foo
+
+#Exercise 2.5
+#Convert the vector c(2,0.5,1,2,0.5,1,2,0.5,1) to a vector of only 1s, using a vector of length 3.
+a <-c(2,0.5,1,2,0.5,1,2,0.5,1)
+cat(c(a[1:9]==1))
+
+#The conversion from a temperature measurement in degrees Fahrenheit F to Celsius C is performed using the following equation:
+c = (5/9)*(f-32)
+f<-c(45, 77, 20, 19, 101, 120,212 )
+c
+
+#Use the vector c(2,4,6) and the vector c(1,2) in conjunction with  * to produce the vector c(2,4,6,4,8,12)
+a <-c(2,4,6)
+b <-c(1,2)
+c <- c(a*b[1],a*b[2])
+c
+
+#Overwrite the middle four elements of the resulting vector from with the two recycled values -0.1 and -100, in that order.
+c[c(2,3,4,5)]<-c(-0.1,-100)
+c
