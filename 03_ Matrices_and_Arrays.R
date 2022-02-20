@@ -56,13 +56,95 @@ B
 
 #Exercise 3.1
 #Construct and store a 4 × 2 matrix that's filled row-wise with the values 4.3, 3.1, 8.2, 8.2, 3.2, 0.9, 1.6, and 6.5, in that order.
+A <- matrix(data=c(4.3, 3.1, 8.2, 8.2, 3.2, 0.9, 1.6, 6.5 ),nrow=4,ncol=2,byrow = TRUE)
+A
 
 #Confirm the dimensions of the matrix from (a) are 3 × 2 if you remove any one row.
-
+B<- A[-1,]
+B
+dim(B)
 #Overwrite the second column of the matrix from (a) with that same column sorted from smallest to largest.
+C<-A[,2]<-sort(A[,2])
+C
 
 #What does R return if you delete the fourth row and the first column from (c)? Use matrix to ensure the result is a single-column matrix, rather than a vector.
+D<-A[-4,-1]
+D<-matrix(c(D),byrow = FALSE)
+D
 
 #Store the bottom four elements of (c) as a new 2 × 2 matrix.
+E<-matrix(c(C),nrow=2,ncol=2)
+E
 
-#Overwrite, in this order, the elements of (c) at positions (4, 2), (1, 2), (4, 1), and (1, 1) with ??? 1/2 of the two values on the diagonal of (e).
+#Overwrite, in this order, the elements of (A) at positions (4, 2), (1, 2), (4, 1), and (1, 1) with ??? 1/2 of the two values on the diagonal of (e).
+A[4,2] <- -(1/2)
+A[1,2] <- -(1/2)
+A[4,1] <- -(1/2)
+A[1,1] <- -(1/2)
+A
+
+#Matrix operations and Algebra
+#Matrix Transpose
+A <- rbind(1:3,4:6)
+A
+t(A)
+t(t(A))
+t(t(A)) == A
+
+#Identity Matrix
+A<-diag(x=3)
+A
+
+#Scalar multiple of a Matrix
+A<-cbind(c(1,2,3),c(4,5,6))
+A
+a<-3
+a*A
+
+#Matrix Addition and Subtraction
+A<-matrix(data=c(1,2,3,4,5,6),nrow=3,ncol=2,byrow=FALSE)
+A
+B<-A
+B
+A+B
+A-B
+
+#Matrix Multiplication
+A<-rbind(1:3,c(1,4,5))
+A
+B<-t(A)
+dim(A)
+dim(B)
+A%*%B
+B%*%A
+
+#Matrix Inversion
+A<-cbind(1:2,4:5)
+A
+solve(A)
+
+A%*%solve(A)
+
+#Exercise 3.2
+#Calculate the following:
+A<-cbind(c(1,2,7),c(2,4,6))
+B<-cbind(c(10,30,50),c(20,40,60))
+C<-(2/7)*A-B
+C
+
+#Store these two matrices:
+A<-matrix(data=c(1,2,7),byrow=FALSE)
+A
+B<-matrix(data=c(3,4,8),byrow=FALSE)
+B
+A%*%B
+t(A)*B
+t(B)%*%(A%*%t(A))
+(A%*%t(A))%*%t(B)
+solve((B%*%t(B))+(A%*%t(A) - diag(x=3)))
+
+# A confirm that A^???1 · A ??? I4 provides a 4 × 4 matrix of zeros.
+A<-rbind(c(2,0,0,0),c(0,3,0,0),c(0,0,5,0),c(0,0,0,-1))
+A
+solve(A)%*%(A- diag(x=4))
+
