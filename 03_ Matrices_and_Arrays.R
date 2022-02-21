@@ -183,3 +183,4 @@ D
 #Overwrite the second and fourth row elements of the second column of layers 1, 3, and 5 of (d) with ???99.
 E <-array(data=(D[c(2,4),2,c(1,3,5)]),dim=c(4,3,6)) 
 E <- -99                 
+
