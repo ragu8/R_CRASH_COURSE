@@ -29,4 +29,14 @@ foo.mat <= bar.mar
 qux <- foo == bar
 qux
 quux <- foo<=(bar+10)
-quusx
+quux
+
+# Exercise 4.1
+#Store the following vector of 15 values as an object in your workspace: c(6,9,7,3,6,7,9,6,3,6,6,7,1,9,1). Identify the following elements:
+a<-c(6,9,7,3,6,7,9,6,3,6,6,7,1)
+a == 6
+a >= 6
+a < 6+2
+a != 6
+
+#Create a new vector from the one used in (a) by deleting its first three elements. With this new vector, fill a 2 × 2 × 3 array. Examine the array for the following entries:
