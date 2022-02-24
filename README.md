@@ -1,6 +1,7 @@
 R_CRASH_COURSE
 ==============
-B r i e f C o n t e n t s
+
+# B r i e f C o n t e n t s
 
 
 PART I: THE LANGUAGE
